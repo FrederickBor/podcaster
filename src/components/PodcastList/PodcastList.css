@@ -1,0 +1,17 @@
+.grid-content {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.card-img {
+  width: 120px;
+  height: 120px;
+  overflow: hidden;
+  border-radius: 100%;
+  margin: -75px auto 0;
+}
+
+.card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

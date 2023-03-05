@@ -1,0 +1,37 @@
+:root {
+  --loader-size: 35px;
+  --loader-color: #037ffc;
+}
+
+@keyframes loader {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+.loader {
+  margin-right: var(--loader-size);
+}
+
+.loader::after,
+.loader::before {
+  animation: loader 2s linear infinite;
+  content: '';
+  border: 2px solid var(--loader-color);
+  background-color: var(--loader-color);
+  width: var(--loader-size);
+  height: var(--loader-size);
+  position: absolute;
+  border-radius: 50%;
+}
+
+.loader::after {
+  opacity: 0;
+  animation-delay: 1s;
+}
